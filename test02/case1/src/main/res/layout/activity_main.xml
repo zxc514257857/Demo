@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qq" />
+
+    <EditText
+        android:id="@+id/et_userName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="QQ/邮箱/手机号码" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:id="@+id/cb_rememberPwd"
+        android:text="记住密码"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:gravity="start|center_vertical"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="登陆领取Q币" />
+
+</LinearLayout>
