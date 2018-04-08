@@ -21,3 +21,12 @@
 <font size=5.5>case4练习了SP缓存
 
 <font size=5.5>case5练习了SeekBar的使用
+
+<font size=6>*test03*
+----------
+
+<font size=5.5>case1练习的是通过读写字符串的方式进行xml文件的序列化；以及文件存储的位置了解
+
+<font size=5.5>case2练习的是通过XmlSerializer的方式进行xml文件的序列化
+
+

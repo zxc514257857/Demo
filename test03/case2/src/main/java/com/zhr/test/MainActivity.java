@@ -4,11 +4,14 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Xml;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import org.xmlpull.v1.XmlSerializer;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -18,29 +21,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * 案例一：学生信息管理系统之学生信息保存 xml文件的数据持久化存储(序列化)
- *
- * 内存卡中保存的内容在/storage/emulated/legacy文件夹或/storage/sdcard0或/mnt/sdcard下找，
- * 这三个基本都是对应在/mnt/shell/emulated/0文件夹下
- *
- * SharedPreference内容保存在/data/data/包名/shared_prefs文件夹下
- * Gilde图片缓存位置/data/data/包名/cache/image_manager_disk_cache文件夹下
- *
- * mContext.getCacheDir()是指 /data/data/包名/cache文件夹
- * mContext.getFilesDir()是指 /data/data/包名/files文件夹
- * mContext.getExternalCacheDir()是指 /mnt/sdcard/Android/data/包名/cache文件夹
- * mContext.getExternalFilesDir()是指 /mnt/sdcard/Android/data/包名/files文件夹
- * mContext.getExternalFilesDir("test")是指 /mnt/sdcard/Android/data/包名/files/test文件夹
- * mContext.getPackageCodePath()是指 /data/app/包名-1.apk文件夹
- * mContext.getPackageResourcePath()是指 /data/app/包名-1.apk文件夹
- * mContext.getDatabasePath("test")是指 /data/data/包名/databases/test文件夹
- * mContext.getDir("test" , Context.MODE_PRIVATE)是指 /data/data/包名/app_test文件夹
- *
- * Environment.getDataDirectory() 是指 /data文件夹
- * Environment.getDownloadCacheDirectory() 是指 /cache文件夹
- * Envrionment.getExternalStorageDirectory() 是指/mnt/sdcard文件夹
- * Environment.getRootDirectory 是指/system文件夹
- * Environment.getExternalStoryPublicDirectory("test") 是指/mnt/sdcard/test文件夹
+ * 案例二：学生信息管理系统之学生信息保存 使用XmlSerializer序列化器进行xml文件的序列化
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -96,28 +77,37 @@ public class MainActivity extends AppCompatActivity {
         //      <sex>male</sex>
         //  </student>
 
-        // 序列化xml文件
-        builder.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
-        builder.append("<student>");
-        builder.append("<name>");
-        builder.append(name);
-        builder.append("</name>");
-        builder.append("<number>");
-        builder.append(number);
-        builder.append("</number>");
-        builder.append("<sex>");
-        builder.append(sex);
-        builder.append("</sex>");
-        builder.append("</student>");
-
         try {
+            // 序列化xml文件
+            XmlSerializer xs = Xml.newSerializer();
             File file = new File(mContext.getCacheDir() , name + ".xml");
-            FileOutputStream fos = new FileOutputStream(file);
-            fos.write(builder.toString().getBytes());
-            fos.close();
+            FileOutputStream os = new FileOutputStream(file);
+            xs.setOutput(os , "utf-8");
+            xs.startDocument("utf-8" , true);
+
+            xs.startTag(null , "student");
+
+            xs.startTag(null , "name");
+            xs.text(name);
+            xs.endTag(null , "name");
+
+            xs.startTag(null , "number");
+            xs.text(number);
+            xs.endTag(null , "number");
+
+            xs.startTag(null , "sex");
+            xs.text(sex);
+            xs.endTag(null , "sex");
+
+            xs.endTag(null , "student");
+
+            xs.endDocument();
+            os.close();
+
             Toast.makeText(mContext, "数据保存成功！", Toast.LENGTH_SHORT).show();
 
         } catch (IOException e) {
+
             Toast.makeText(mContext, "数据保存失败！", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
