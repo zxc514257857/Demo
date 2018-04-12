@@ -28,5 +28,9 @@
 <font size=5.5>case1练习的是通过读写字符串的方式进行xml文件的序列化；以及文件存储的位置了解
 
 <font size=5.5>case2练习的是通过XmlSerializer的方式进行xml文件的序列化
+  
+<font size=5.5>case3练习的是通过Xml的序列化和反序列化(XmlSerializer和XmlPullParser的使用)，MVC设计模式思想
+  
+<font size=5.5>case4练习的是通过数据库帮助类创建数据库
 
 
