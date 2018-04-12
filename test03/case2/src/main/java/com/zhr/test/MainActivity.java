@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
             // 序列化xml文件
             XmlSerializer xs = Xml.newSerializer();
             File file = new File(mContext.getCacheDir() , name + ".xml");
-            FileOutputStream os = new FileOutputStream(file);
-            xs.setOutput(os , "utf-8");
+            FileOutputStream fos = new FileOutputStream(file);
+            xs.setOutput(fos , "utf-8");
             xs.startDocument("utf-8" , true);
 
             xs.startTag(null , "student");
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             xs.endTag(null , "student");
 
             xs.endDocument();
-            os.close();
+            fos.close();
 
             Toast.makeText(mContext, "数据保存成功！", Toast.LENGTH_SHORT).show();
 
