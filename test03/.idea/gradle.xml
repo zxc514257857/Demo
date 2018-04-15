@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$/case2" />
             <option value="$PROJECT_DIR$/case3" />
             <option value="$PROJECT_DIR$/case4" />
+            <option value="$PROJECT_DIR$/case5" />
+            <option value="$PROJECT_DIR$/case6" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
