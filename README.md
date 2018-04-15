@@ -33,4 +33,4 @@
   
 <font size=5.5>case4练习的是通过数据库帮助类创建数据库
 
-
+<font size=5.5>case5 case6练习的是数据库Dao(Data access object)类的编写
