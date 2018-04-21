@@ -34,3 +34,12 @@
 <font size=5.5>case4练习的是通过数据库帮助类创建数据库
 
 <font size=5.5>case5 case6练习的是数据库Dao(Data access object)类的编写
+
+<font size=6>*test04*
+----------
+
+<font size=5.5>case1练习的是ListView的简单使用
+
+<font size=5.5>case2练习的是学生信息管理系统配合ListView的使用
+  
+<font size=5.5>case3练习的是常见的对话框显示，包括确定取消对话框 单选对话框 多选对话框 加载中对话框 进度条对话框等；并严格按照MVC思想分包，编写代码
