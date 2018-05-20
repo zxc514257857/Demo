@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rUS\\values-en-rUS.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 42,
+                    "endOffset": 93
+                },
+                "from": {
+                    "file": "E:\\Git\\Demo\\test04\\case5\\src\\main\\res\\values-en-rUS\\strings.xml",
+                    "position": {
+                        "startLine": 1,
+                        "startColumn": 4,
+                        "startOffset": 16,
+                        "endColumn": 42,
+                        "endOffset": 54
+                    }
+                }
+            }
+        ]
+    }
+]

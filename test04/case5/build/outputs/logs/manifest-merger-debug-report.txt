@@ -1,0 +1,104 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:2:1-25:12
+	package
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:3:5-27
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+uses-permission#android.permission.CHANGE_CONFIGURATION
+ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:5:22-76
+application
+ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:7:5-24:19
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\aad07fe1a85830889af4e7c6456783a767e73881\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\d51a74d6fbe220ef1dc09fb8acfcc69c7e3de1d7\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\bfa68df12397246447c99cf882c0093dcc6c0ccf\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\02a229218f0f0e81e8039a143329c131e3465138\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\ad4a48695d579637fbe65d5da0ac848be00c1c34\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\c43f99a5358e1e6c945d979b07020d186f783e56\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\8792a1c1ff09218824ed72bbc241ce17b0bc75e9\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\854618d37b51391448c984d0610157775777f193\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\91409aae7c30178ebf6e9299ab7616f664a772b0\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\51b6a4331e54306ef411ad4d5f1c7669c7335ab2\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:10:9-40
+	android:supportsRtl
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:11:9-35
+	android:allowBackup
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:8:9-35
+	android:icon
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:9:9-43
+	android:theme
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:12:9-40
+activity#com.zhr.test.ui.main.controler.MainActivity
+ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:13:9-19:20
+	android:configChanges
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:14:19-49
+	android:name
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:13:19-65
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:15:13-18:29
+action#android.intent.action.MAIN
+ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:17:27-74
+activity#com.zhr.test.ui.sec.controler.SecondActivity
+ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:21:9-22:45
+	android:configChanges
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:22:13-43
+	android:name
+		ADDED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml:21:19-66
+uses-sdk
+INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\aad07fe1a85830889af4e7c6456783a767e73881\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\d51a74d6fbe220ef1dc09fb8acfcc69c7e3de1d7\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\bfa68df12397246447c99cf882c0093dcc6c0ccf\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\b0a0c9e1c197c1bbc6f17a326076b81b076b17fe\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\02a229218f0f0e81e8039a143329c131e3465138\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\ad4a48695d579637fbe65d5da0ac848be00c1c34\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\c43f99a5358e1e6c945d979b07020d186f783e56\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\8792a1c1ff09218824ed72bbc241ce17b0bc75e9\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\854618d37b51391448c984d0610157775777f193\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\91409aae7c30178ebf6e9299ab7616f664a772b0\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\51b6a4331e54306ef411ad4d5f1c7669c7335ab2\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.zhy:okhttputils:2.6.2] C:\Users\ZHR\.android\build-cache\7c478106e4a697489c75e17c39fd373bf1cdfab0\output\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+		INJECTED from E:\Git\Demo\test04\case5\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\aad07fe1a85830889af4e7c6456783a767e73881\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\d51a74d6fbe220ef1dc09fb8acfcc69c7e3de1d7\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\bfa68df12397246447c99cf882c0093dcc6c0ccf\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\b0a0c9e1c197c1bbc6f17a326076b81b076b17fe\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\02a229218f0f0e81e8039a143329c131e3465138\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\ad4a48695d579637fbe65d5da0ac848be00c1c34\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\c43f99a5358e1e6c945d979b07020d186f783e56\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\8792a1c1ff09218824ed72bbc241ce17b0bc75e9\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\854618d37b51391448c984d0610157775777f193\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\91409aae7c30178ebf6e9299ab7616f664a772b0\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\51b6a4331e54306ef411ad4d5f1c7669c7335ab2\output\AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\output\AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\ZHR\.android\build-cache\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\output\AndroidManifest.xml:26:9-47

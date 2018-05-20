@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\0ceabc0b540db32b9d22df1a30046cab3bbe6e79\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\ZHR\\.android\\build-cache\\aad07fe1a85830889af4e7c6456783a767e73881\\output\\res\\anim\\abc_slide_out_top.xml"
+    }
+]
