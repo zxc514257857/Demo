@@ -8,6 +8,12 @@
 <font size=5.5>case3温习了点击事件的五种写法
 
 <font size=5.5>case4测试了各个级别Log打印效果，常使用i和e
+
+<font size=5.5>case5编写计算器布局界面 练习android五大布局之表格布局
+
+<font size=5.5>case6编写霓虹灯布局界面 练习android五大布局之帧布局
+
+<font size=5.5>case7明确padding margin gravity layout_gravity alignParent centerInParent的含义
   
 <font size=6>*test02*
 ----------
