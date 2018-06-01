@@ -28,6 +28,12 @@
 
 <font size=5.5>case5练习了SeekBar的使用
 
+<font size=5.5>case6使用Application存储全局变量Demo编写
+
+<font size=5.5>case7Junit单元测试以及通过jacoco生成代码覆盖率报告
+
+<font size=5.5>case8使用LruCache、DiskLruCache和SharedPreference实现图片以及字符串的三级缓存，使用VideoCache实现视频的本地缓存，简单使用Retrofit和RxJava、RxAndroid实现了数据的请求
+
 <font size=6>*test03*
 ----------
 
