@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ja-rJP\\values-ja-rJP.xml",
+        "outputFile": "D:\\develop\\Github\\Demo\\test04\\case5\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ja-rJP\\values-ja-rJP.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 92
                 },
                 "from": {
-                    "file": "E:\\Git\\Demo\\test04\\case5\\src\\main\\res\\values-ja-rJP\\strings.xml",
+                    "file": "D:\\develop\\Github\\Demo\\test04\\case5\\src\\main\\res\\values-ja-rJP\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 57,
+                        "startOffset": 55,
                         "endColumn": 41,
-                        "endOffset": 94
+                        "endOffset": 92
                     }
                 }
             }

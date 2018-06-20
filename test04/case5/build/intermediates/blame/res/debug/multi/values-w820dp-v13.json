@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+        "outputFile": "D:\\develop\\Github\\Demo\\test04\\case5\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "E:\\Git\\Demo\\test04\\case5\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "D:\\develop\\Github\\Demo\\test04\\case5\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

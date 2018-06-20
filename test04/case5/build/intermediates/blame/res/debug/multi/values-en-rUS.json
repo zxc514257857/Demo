@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\Git\\Demo\\test04\\case5\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rUS\\values-en-rUS.xml",
+        "outputFile": "D:\\develop\\Github\\Demo\\test04\\case5\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rUS\\values-en-rUS.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 93
                 },
                 "from": {
-                    "file": "E:\\Git\\Demo\\test04\\case5\\src\\main\\res\\values-en-rUS\\strings.xml",
+                    "file": "D:\\develop\\Github\\Demo\\test04\\case5\\src\\main\\res\\values-en-rUS\\strings.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 4,
