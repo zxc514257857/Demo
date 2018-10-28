@@ -8,4 +8,6 @@ public interface MvcView {
     TextView showTextView(Context context , String content);
 
     void showToast(Context context , String content);
+
+
 }

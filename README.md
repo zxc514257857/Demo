@@ -47,3 +47,20 @@
 <font size=5.5>case4练习的是帧动画。在drawable目录下创建，以animation为节点，通过设置oneshot为true或false来控制动画的循环播放
 
 <font size=5.5>case5练习的是图片资源及文字资源的国际化。获取本地默认的国家类型和需要设置的国家类型进行对比和替换，来达到国际化的目的
+
+<font size=5.5>case6练习的是android的样式和主题的使用
+
+<font size=5.5>case7练习的是android中单例模式的几种常见写法
+
+<font size=6>*test05*
+----------
+
+<font size=5.5>case1练习的是访问网络、进程切换
+
+<font size=5.5>case2练习的是更新UI的测试
+
+<font size=5.5>case3练习的是网页源码查看
+
+<font size=5.5>case4练习的是手机号码归属地查询
+
+<font size=5.5>case5练习的是IP地址归属查询

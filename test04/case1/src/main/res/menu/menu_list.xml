@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/base_adapter"
+          app:showAsAction="never"
+          android:title="base_adapter"/>
+
+    <item android:id="@+id/array_adapter"
+          app:showAsAction="never"
+          android:title="array_adapter"/>
+
+    <item android:id="@+id/simple_adapter"
+          app:showAsAction="never"
+          android:title="simple_adapter"/>
+
+</menu>
