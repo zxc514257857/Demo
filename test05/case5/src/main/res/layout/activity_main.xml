@@ -10,7 +10,6 @@
 
     <EditText
         android:id="@+id/et"
-        android:hint="请输入公网ip地址"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

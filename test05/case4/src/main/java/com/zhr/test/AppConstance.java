@@ -4,6 +4,7 @@ public class AppConstance {
 
     private static final String BASE_CONSTANCE = "phone";
     public static final String BASE = "http://api.k780.com:88/?app=" + BASE_CONSTANCE + ".get&" + BASE_CONSTANCE + "=";
+
     public static final String TEST_APP_KEY = "10003";
     public static final String TEST_SIGN = "b59bc3ef6191eb9f747dd4e83c99f2a4";
     public static final String TEST_FORMAT = "json";
