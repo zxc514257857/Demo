@@ -64,3 +64,35 @@
 <font size=5.5>case4练习的是手机号码归属地查询
 
 <font size=5.5>case5练习的是IP地址归属查询
+  
+<font size=5.5>case6练习的是身份证号码归属查询
+  
+<font size=5.5>case7练习的是本机公网IP地址查询
+  
+<font size=5.5>case8练习的是未来七天天气预报查询
+  
+<font size=5.5>case9练习的是查询邮政编码归属地 查询区号归属地 日期查询 北京时间查询
+  
+<font size=5.5>case10练习的是短网址生成
+  
+<font size=5.5>case11练习的是二维码生成（支付二维码也可）
+  
+<font size=5.5>case12练习的是域名信息查询(alexa信息、备案信息(未免费开放)、whois信息)
+
+<font size=5.5>case13练习的是解码punycode
+  
+<font size=5.5>case14练习的是汉字拼音互转
+  
+<font size=5.5>case15练习的是汉字繁简转换
+  
+<font size=5.5>case16练习的是货币比率获取
+  
+<font size=5.5>case17练习的是历史汇率查询
+  
+<font size=5.5>case18练习的是人民币外汇牌价查询
+  
+<font size=5.5>case19练习的是OkHttpUtils的使用
+  
+  
+  
+  
