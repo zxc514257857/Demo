@@ -93,6 +93,26 @@
   
 <font size=5.5>case19练习的是OkHttpUtils的使用
   
+<font size=6>*test06*
+----------
+
+<font size=5.5>case1练习的是Intent界面跳转、android 5.0以后系统自带的转场效果以及android 5.0以前使用overridePendingTransition做的转场效果
+
+<font size=5.5>case2练习的是开启意图的两种方式：显式意图（明确指明组件的意图）和隐式意图（未明确指明组件的意图）
+
+<font size=5.5>case3显式意图和隐式意图练习
+
+<font size=5.5>case4练习的是使用隐式意图调用系统浏览器打开网页
   
+<font size=5.5>case5练习的是使用隐式意图进行短信分享
+  
+<font size=5.5>case6练习的是Activity生命周期分析
+  
+<font size=5.5>case7短信助手案例，练习startActivityForResult、RecyclerView中LayoutManager的创建、ItemDecoration的创建、Adapter的OnItemClickListener的创建、Adapter中Item点击事件和长按事件的自定义以及Item的滑动删除和长按删除
+  
+<font size=5.5>case8模拟视频播放，练习的是Activity的生命周期
+  
+  
+
   
   
