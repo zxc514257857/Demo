@@ -112,7 +112,24 @@
   
 <font size=5.5>case8模拟视频播放，练习的是Activity的生命周期
   
-  
+<font size=6>*test7*
+---------
+<font size=5.5>case1练习的是android原生代码实现多线程下载功能
 
+<font size=5.5>case2练习的是使用Retrofit进行网络请求操作
+
+<font size=5.5>case3练习的是android通过MediaPlayer实现语音播报功能
+
+<font size=5.5>case4、case5练习的是android通过MediaPlayer实现语音播报功能
+
+<font size=5.5>case6练习的是View弹跳动画和FloatingActionButton悬浮按钮
   
-  
+<font size=5.5>case7练习的是腾讯VasSonic X5内核浏览器框架
+
+<font size=5.5>case8练习的是GreenDao数据库的基本使用
+
+<font size=5.5>case9练习的是SoundPool的使用
+
+<font size=5.5>case10练习的是android中的时间类、debug调试、字节等单位的转换、和C语言 socket对接传递结构体数据
+
+<font size=5.5>case11练习的是Socket Server端和Client端 代码编写
