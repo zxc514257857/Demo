@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/cbDelay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="delay"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlBg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/ll02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="110dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="爱心捐赠"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:paddingRight="10dp"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon2"
+                android:layout_marginRight="25dp"
+                app:fabSize="mini"
+                app:elevation="3dp"
+                app:backgroundTint="@android:color/holo_blue_dark"/>
+
+            <!--xml文件中xmlns、android、app、tools简析-->
+            <!--xmlns是xml namespace的简写 就是xml的命名空间-->
+            <!--android是规范用户可以使用的属性范围-->
+            <!--app是是自定义属性及support支持包之类的-->
+            <!--tools是用于运行时更改布局属性的-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll02"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="余额宝"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:paddingRight="10dp"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon3"
+                android:layout_marginRight="25dp"
+                app:fabSize="mini"
+                app:elevation="3dp"
+                app:backgroundTint="@android:color/holo_blue_dark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll03"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="相互宝"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:paddingRight="10dp"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon4"
+                android:layout_marginRight="25dp"
+                app:fabSize="mini"
+                app:elevation="3dp"
+                app:backgroundTint="@android:color/holo_blue_dark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll04"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="网商银行"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:paddingRight="10dp"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon5"
+                android:layout_marginRight="25dp"
+                app:fabSize="mini"
+                app:elevation="3dp"
+                app:backgroundTint="@android:color/holo_blue_dark"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/icon1"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        app:fabSize="normal"
+        app:elevation="5dp"
+        app:backgroundTint="@android:color/holo_purple"
+        app:rippleColor="@color/holo_blue_dark"/>
+
+    <!--elevation fab的阴影高度-->
+    <!--fabSize fab的按钮样式大小-->
+    <!--backgroundTint fab的背景颜色-->
+    <!--rippleColor 点击fab时形成的波纹的颜色-->
+
+</RelativeLayout>

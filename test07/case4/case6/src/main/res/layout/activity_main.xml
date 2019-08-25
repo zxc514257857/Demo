@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<CheckBox-->
+        <!--android:id="@+id/cb"-->
+        <!--android:text="delay"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"/>-->
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_bg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#80000000"-->
+        <!--android:visibility="gone">-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_01"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="90dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="销售单"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:gravity="right"/>-->
+
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/fab_01"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@mipmap/test01"-->
+                <!--android:layout_marginRight="25dp"-->
+                <!--app:fabSize="mini"-->
+                <!--app:elevation="10dp"-->
+                <!--app:backgroundTint="@android:color/darker_gray"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_02"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_above="@id/ll_01"-->
+            <!--android:layout_marginBottom="10dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="销售退货"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:gravity="right"/>-->
+
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/fab_02"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="25dp"-->
+                <!--android:src="@mipmap/test02"-->
+                <!--app:fabSize="mini"-->
+                <!--android:backgroundTint="@android:color/holo_orange_dark"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_03"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_above="@id/ll_02"-->
+            <!--android:layout_marginBottom="10dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="收款单"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:gravity="right"/>-->
+
+            <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/fab_03"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="25dp"-->
+                <!--android:src="@mipmap/test03"-->
+                <!--app:fabSize="mini"-->
+                <!--android:backgroundTint="@android:color/holo_purple"/>-->
+
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="84dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--app:elevation="5dp"-->
+        <!--app:fabSize="normal"-->
+        <!--app:rippleColor="@android:color/holo_red_dark"/>-->
+
+</RelativeLayout>
