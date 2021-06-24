@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 /**
  * MVC示例代码
  */
-class LoginActivity : AppCompatActivity(), LoginModel.doLoginStateChange {
+class LoginActivity : AppCompatActivity(), LoginModel.LoginStateChangeCallabck {
 
     /**
      * by lazy
@@ -61,6 +61,11 @@ class LoginActivity : AppCompatActivity(), LoginModel.doLoginStateChange {
                     // 进行登录，此操作为异步
                     loginModel.doLogin(username, password, this)
                     // 点击完后禁止点击，防止数据重复提交
+                    btnLogin.isEnabled = false
+                }
+                else -> {
+                    // 该用户名不可用
+                    btnLogin.text = "用户名不可用"
                     btnLogin.isEnabled = false
                 }
             }
