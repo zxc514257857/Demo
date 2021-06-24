@@ -1,0 +1,4 @@
+include ':case1', ':case2', ':case3', ':case4', ':MPChartLib', 'AIDLServer', 'AIDLClient'
+include ':case5', ':case6'
+include ':case7'
+include ':case8'

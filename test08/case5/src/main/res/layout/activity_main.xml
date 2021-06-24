@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--需要引入第三方库  com.google.android.material:material:1.2.1-->
+    <!--不一定和ConstraintLayout搭配使用，和其他的父布局也可以一起使用-->
+    <!--图片的shape功能 就在 shapeAppearance 这个属性上-->
+    <!--预览时背景是黑边，但其实是没有的 默认是有一个小圆角-->
+    <!--stroke 表示描边 是和shapeAppearance里面的 cornerFamily走的 如果是round就不要corner 如果是cut就是贴一起的-->
+    <!--如果描边的效果要正常的话 padding的宽度要为stroke宽度的一半-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="2dp"
+        android:src="@mipmap/test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/OtherStyle4"
+        app:strokeColor="#FF0000"
+        app:strokeWidth="4dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
