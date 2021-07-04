@@ -37,8 +37,10 @@ class LoginActivity : AppCompatActivity(), LoginPresenter.LoginStateChangeCallab
 
         val username: String = etUsername.text.toString().trim()
         val password: String = etPassword.text.toString().trim()
+
         // 检查用户名状态
         // 这里通过匿名内部类实现或者通过this 外部类去实现都是可以的
+        // 在这种需要访问网络的异步线程，需要注意切换到主线程后，UI界面是否被销毁的问题，需要对控件进行判空处理
         loginPresenter.checkUserState(username, password, object : LoginPresenter.CheckUserStateCallback {
 
             // View层不用处理状态，直接显示对应状态的数据就可以了
@@ -65,14 +67,14 @@ class LoginActivity : AppCompatActivity(), LoginPresenter.LoginStateChangeCallab
     }
 
     override fun onLoading() {
-        btnLogin.text = "登录中"
+        btnLogin?.text = "登录中"
     }
 
     override fun onLoginSuccess() {
-        btnLogin.text = "登录成功"
+        btnLogin?.text = "登录成功"
     }
 
     override fun onLoginFailed() {
-        btnLogin.text = "登录失败"
+        btnLogin?.text = "登录失败"
     }
 }
