@@ -34,7 +34,6 @@ class LoginActivity : AppCompatActivity(), LoginPresenter.LoginStateChangeCallab
 
         // 如果要学习打断点的使用，在 https://www.bilibili.com/video/BV1Dk4y1C7mm?p=5 这里面的第19分钟有用到
         // 最主要的就是 Attach到当前进程、以及Step into和Resume Progremzhe三个按钮
-
         val username: String = etUsername.text.toString().trim()
         val password: String = etPassword.text.toString().trim()
 
