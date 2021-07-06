@@ -9,6 +9,10 @@ import com.blankj.utilcode.util.ActivityUtils;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 测试MPChartLib 里面的
+ * 圆饼图、垂直柱状图、折线图和雷达图demo
+ */
 public class MainActivity extends AppCompatActivity {
 
     private Context mContext = MainActivity.this;
@@ -34,9 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn_line:
+                // TODO: 2021-07-06 折线图demo  安装mpchartDemo
                 break;
 
             case R.id.btn_radar:
+                // TODO: 2021-07-06 雷达图demo
                 break;
 
             default:

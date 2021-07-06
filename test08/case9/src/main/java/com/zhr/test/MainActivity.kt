@@ -5,6 +5,11 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * 测试切换系统主题功能 以及调用recreate方法会走onSavedInstanceState方法和onRestoreInstanceState方法
+ * 测试无障碍服务功能 AccessibilityService
+ * 测试 TableLayout 和Gridlayout 进行复杂表格的制作  使用起来感觉GridLayout比Tablelayout更灵活 好用
+ */
 class MainActivity : AppCompatActivity() {
 
     private var isClicked: Boolean = true

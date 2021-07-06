@@ -10,16 +10,16 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.Settings;
-import android.support.v4.content.FileProvider;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final String TAG = "[TAG][MainActivity]";
     //    private static final String PACKAGE_NAME = "com.qiyi.video";
-    private static final String PACKAGE_NAME = "com.zhumei.commercialscreen";
+//    private static final String PACKAGE_NAME = "com.zhumei.commercialscreen";
+    private static final String PACKAGE_NAME = "com.wzy.installdemo";
     //    private String apkPath = "/mnt/sdcard/test.apk";
     private String apkPath = "";
 
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         tvTest = (TextView) findViewById(R.id.tv_test);
         findViewById(R.id.btn_install).setOnClickListener(this);
         findViewById(R.id.btn_uninstall).setOnClickListener(this);
@@ -100,17 +102,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            //静默安装
+            //静默安装   通过root的方式安装apk  通过apk地址安装apk
             case R.id.btn_install:
                 installSlient(apkPath);
                 break;
-            //静默卸载
+            //静默卸载   通过root的方式卸载apk  通过包名卸载apk
             case R.id.btn_uninstall:
                 uninstallSlient();
                 break;
             //设置无障碍服务
             case R.id.btn_set:
-                //跳转到开启无障碍服务的界面
+                // 跳转到开启无障碍服务的界面
                 Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
                 startActivity(intent);
                 break;

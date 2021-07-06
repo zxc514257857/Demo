@@ -2,3 +2,5 @@ include ':case1', ':case2', ':case3', ':case4', ':MPChartLib', 'AIDLServer', 'AI
 include ':case5', ':case6'
 include ':case7'
 include ':case8'
+include ':case9'
+include ':installdemo'

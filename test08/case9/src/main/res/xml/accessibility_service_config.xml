@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<accessibility_service xmlns:android="http://schemas.android.com/apk/res/android">
-  
-</accessibility_service>
+<accessibility-servcie xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeAllMask"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagReportViewIds"
+    android:canRetrieveWindowContent="true"
+    android:packageNames="com.android.packageinstaller"
+    android:description="我是无障碍服务的描述1"
+    android:notificationTimeout="100">
+
+    <!--    accessibilityEventType 指定需要辅助的事件类型： typeAllMask 监听所有事件类型-->
+    <!--    accessibilityFeedbackType 指定反馈给用户的方式：feedbackGeneric 常规的反馈方式-->
+    <!--    accessibilityFlags 指定应用程序需要获取到哪些信息 flagReportViewIds 获取到View的id-->
+    <!--    canRetrieveWindowContent 是否希望能够检索活动窗口内容 true-->
+    <!--    packageName 指定需要辅助的应用程序的包名，可以为系统的也可以为应用的；不写表示所有app-->
+    <!--    notificationTimeout 接收事件的时间间隔，通常设置为100即可-->
+    <!--    description 无障碍服务描述，会在开启辅助功能页面看到这段文字-->
+
+
+</accessibility-servcie>
