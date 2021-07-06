@@ -13,7 +13,7 @@ class LoginModel {
     }
 
     fun checkUserState(username: String, block: (Int) -> Unit) {
-        val value = random.nextInt(2)
+        val value: Int = random.nextInt(2)
         block.invoke(value)
     }
 

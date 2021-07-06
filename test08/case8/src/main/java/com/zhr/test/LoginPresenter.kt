@@ -26,6 +26,8 @@ class LoginPresenter {
         }
 
         // 0表示该用户名不可用  1表示该用户名可用
+        // model层访问网络完成以后，需要线程的切换，因为数据请求在异步线程，数据显示在主线程
+        // 在model层回调给Presenter的时候需要注意线程的切换
         loginModel.checkUserState(username) {
             when (it) {
                 0 -> {
