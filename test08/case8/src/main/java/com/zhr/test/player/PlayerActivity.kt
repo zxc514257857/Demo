@@ -3,6 +3,7 @@ package com.zhr.test.player
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.zhr.test.R
+import kotlinx.android.synthetic.main.activity_player.*
 
 class PlayerActivity : AppCompatActivity(), IPlayerCallback {
 
@@ -13,12 +14,21 @@ class PlayerActivity : AppCompatActivity(), IPlayerCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player)
+        // 当这里多次调用的时候 就会出现多个callback
         playerPresenter.registerCallback(this)
         initListener()
     }
 
     private fun initListener() {
-
+        btnPlayOrPause.setOnClickListener {
+            playerPresenter.playOrPause()
+        }
+        btnPlayNext.setOnClickListener {
+            playerPresenter.playNext()
+        }
+        btnPlayPrevious.setOnClickListener {
+            playerPresenter.playPrevious()
+        }
     }
 
     override fun onDestroy() {
@@ -26,23 +36,25 @@ class PlayerActivity : AppCompatActivity(), IPlayerCallback {
         playerPresenter.unRegisterCallback(this)
     }
 
+    // P层写回调、写其他方法
+    // P层写接口、写方法，然后去实现接口里面的方法
     override fun onTitleChange(title: String) {
-        TODO("Not yet implemented")
+        tvSongTitle?.text = title
     }
 
-    override fun onProgressChange(currentProgress: Int) {
-        TODO("Not yet implemented")
-    }
+    override fun onProgressChange(currentProgress: Int) {}
 
     override fun onPlaying() {
-        TODO("Not yet implemented")
+        // 播放时 --> 显示暂停
+        btnPlayOrPause?.text = "暂停"
     }
 
     override fun onPlayerPause() {
-        TODO("Not yet implemented")
+        // 暂停时 --> 显示播放
+        btnPlayOrPause?.text = "播放"
     }
 
-    override fun onPlayerCoverChange() {
-        TODO("Not yet implemented")
+    override fun onPlayerCoverChange(cover: String) {
+        tvSongCover?.text = cover
     }
 }

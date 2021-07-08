@@ -10,5 +10,5 @@ interface IPlayerCallback {
 
     fun onPlayerPause()
 
-    fun onPlayerCoverChange()
+    fun onPlayerCoverChange(cover: String)
 }
