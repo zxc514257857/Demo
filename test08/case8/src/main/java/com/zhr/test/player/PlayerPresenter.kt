@@ -13,10 +13,21 @@ package com.zhr.test.player
  * 暂停音乐
  * - 更新UI状态为暂停
  */
-class PlayerPresenter {
+class PlayerPresenter private constructor() {
 
     private val callbackList = arrayListOf<IPlayerCallback>()
     private var currentPlayState = PlayState.NONE
+
+    // 将PlayerPresenter改成单例模式
+    // 1、私有构造方法  -- 不能创建对象
+    // 2、创建伴随对象，类似Java中的static  -- 调用时可以类名点调用
+    // 3、创建懒加载的一个对象  -- 只创建一个对象
+    companion object {
+        val instance by lazy {
+            PlayerPresenter()
+        }
+    }
+
 
     // 枚举类的写法
     enum class PlayState {

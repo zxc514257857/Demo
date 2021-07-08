@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_player.*
 class PlayerActivity : AppCompatActivity(), IPlayerCallback {
 
     private val playerPresenter by lazy {
-        PlayerPresenter()
+        PlayerPresenter.instance
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
