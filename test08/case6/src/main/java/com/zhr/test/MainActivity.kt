@@ -13,7 +13,7 @@ import com.zhr.test.bean.Person2
 import com.zhr.test.bean.Person3
 
 /**
- * ARouter 框架使用
+ * 案例六：ARouter的使用
  * https://github.com/alibaba/ARouter/blob/master/README_CN.md
  * 1、添加基础依赖和配置
  * module的build.gradle中配置api依赖 和kapt（java和kotlin配置的方法不一样，这里使用的是kotlin的配置方法）
@@ -29,7 +29,6 @@ import com.zhr.test.bean.Person3
  * 5、添加混淆规则
  * 这是一个最基本的使用案例，如果要更详细的，可以找自己测试过的ARouter官方Demo
  */
-
 /**
  * 第三步：在支持路由的页面上添加注解，这里的path路径需要对应的有两个，一个是发送端地址，一个是接收端地址
  * path路径格式一般为/module名/类名

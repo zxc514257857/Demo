@@ -9,6 +9,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
+ * 案例三：PendingIntent的使用
  * 1、pendingIntent 是Intent的封装
  * Intent是立刻执行的行为，pendingIntent不是立刻执行的行为，是满足某些条件才执行的行为
  * pendingIntent 的使用场景是：闹钟、通知、桌面部件
@@ -62,5 +63,8 @@ public class MainActivity extends AppCompatActivity {
         }
         // 通过getActivities() 创建一个pandingIntent 当意图触发时，效果相当于mContext.startActivity()
         PendingIntent pendingIntent5 = PendingIntent.getActivities(this , 0 , new Intent[]{} , PendingIntent.FLAG_UPDATE_CURRENT);
+        // pendingIntent 一般就是其他应用组件需要调用它时要传入的内容
+        // Intent和PengingIntent的区别，Intent是需要立即执行的意图，PendingIntent是一个需要被触发的Intent(是对Intent的一个封装)
+        // 而这里需要去判断是getActivity还是getService是根据实际是需要打开activity、发送服务广播等来判断
     }
 }

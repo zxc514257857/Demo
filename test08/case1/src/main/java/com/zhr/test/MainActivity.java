@@ -10,6 +10,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
+ * 案例一：
  * 测试MPChartLib 里面的
  * 圆饼图、垂直柱状图、折线图和雷达图demo
  */
@@ -38,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn_line:
-                // TODO: 2021-07-06 折线图demo  安装mpchartDemo
+                // TODO: 2021-07-06 折线图demo  安装mpchartDemo  还需要完善
                 break;
 
             case R.id.btn_radar:
-                // TODO: 2021-07-06 雷达图demo
+                // TODO: 2021-07-06 雷达图demo  还需要完善
                 break;
 
             default:

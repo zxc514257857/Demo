@@ -21,6 +21,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
 
     private ViewPager mVp;
 
+    // TODO: 2021-07-06 case2中的 fragment使用 还需要完善
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.blankj.utilcode.util.NotificationUtils;
 
 /**
+ * 案例四：Notification的使用
  * Notification的实现步骤：
  * 获取NotificationManager对象
  * 获取Notification对象

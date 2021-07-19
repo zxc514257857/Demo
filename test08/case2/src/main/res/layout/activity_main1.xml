@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConstraintLayoutActivity"
+    tools:ignore="MissingConstraints">
+
+    <!--    ratio 使用：某一个边设置为0dp，然后设置ratio比例为1：1-->
+    <TextView
+        android:id="@+id/A1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:text="A1"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    layout_goneMarginStart 的意思是，当对方gone掉了之后，仍然marginStart xxdp-->
+    <TextView
+        android:id="@+id/B1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:text="B1"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/A1"
+        app:layout_constraintStart_toEndOf="@id/A1"
+        app:layout_constraintTop_toTopOf="@id/A1"
+        app:layout_goneMarginStart="100dp" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    ConstraintLayout 里面的宽高设置要么为wrap_content、要么为xxdp、要么为0dp(即match_parent)，其他的是不可能的-->
+    <!--    layout_constraintWidth_default 设置宽度方面默认约束方式 spread为占用所有约束空间，wrap为匹配内容大小约束空间
+            percent为按照布局百分比设置约束空间 需要再设置一个属性 layout_constraintWidth_percent-->
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="哈哈哈哈哈哈哈哈哈哈"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="spread" />
+
+    <!--  宽度设置为wrap_content  -->
+    <!--  设置了 constrainedWidth=true 即强制约束，类似于设置0dp的效果-->
+    <TextView
+        android:id="@+id/A2"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        android:background="#0000FF"
+        android:gravity="center"
+        android:text="AAAAAAAAAAAAAAAAAAAAAA2"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="spread" />
+
+    <!--  宽度设置为0dp 0dp模式就是硬刚模式，刚不过只会换行也不退缩-->
+    <TextView
+        android:id="@+id/B2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="50dp"
+        android:background="#0000FF"
+        android:gravity="center"
+        android:text="BBBBBBBBBBBBBBBBBBBBBBB2"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    chain 即链式结构，链式结构有垂直链式和水平链式，packed表示中间贴紧居中，spread表示分散均分空间-->
+<!--    spread_inside表示两侧控件贴近两边，剩余的控件均分剩余空间-->
+<!--    chain还支持weight权重配置，width设置为0dp，weight设置比例权重-->
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="哈哈1"
+        app:layout_constraintEnd_toStartOf="@+id/btn4"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/B2" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="哈哈2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@+id/B2" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="哈哈3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn4"
+        app:layout_constraintTop_toBottomOf="@+id/B2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
