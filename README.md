@@ -112,7 +112,7 @@
   
 <font size=5.5>case8模拟视频播放，练习的是Activity的生命周期
   
-<font size=6>*test7*
+<font size=6>*test07*
 ---------
 <font size=5.5>case1练习的是android原生代码实现多线程下载功能
 
