@@ -7,14 +7,25 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="40sp"
+        android:text="设置无障碍"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="智能安装apk"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -22,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <!--    collapseColumns 设置隐藏列的id 0就是第一列 2就是第三列 -->
     <!--    stretchColumns 允许被拉伸的列-->
@@ -79,68 +90,6 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="4"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_weight="1"
-                android:text="5"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_weight="1"
-                android:text="6"
-                tools:ignore="ButtonStyle" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp">
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="7"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_weight="1"
-                android:text="8"
-                tools:ignore="ButtonStyle" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_weight="1"
-                android:text="9"
-                tools:ignore="ButtonStyle" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp">
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:text="10"
                 tools:ignore="ButtonStyle" />
 
@@ -156,6 +105,78 @@
     </TableLayout>
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <!--    flow_horizontalGap 设置水平间距-->
+    <!--    flow_wrapMode 设置排列方式-->
+    <!--    flow_horizontalStyle 水平链排列方式-->
+    <!--    flow_horizontalAlign 水平链对齐方式-->
+    <!--    constraint_referenced_ids 设置关联控件id-->
+    <!--    flow_maxElementsWrap 每行子View数量-->
+    <!--    flow 布局适用于item长度不固定时的自动换行情况-->
+    <!--    要实现大小不一效果除了设置死宽高之外，其他的方法暂时没有想到-->
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="btn1,btn2,btn3,btn4,btn5"
+        app:flow_horizontalGap="5dp"
+        app:flow_maxElementsWrap="3"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintBottom_toBottomOf="@id/gl3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gl1" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="1"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="2"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="3"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="4"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/btn4"
+        tools:ignore="ButtonStyle" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -168,7 +189,7 @@
             layout_rowWeight 设置控件所在行的权重-->
     <!--    设置控件横跨的行和列 layout_rowSpan 和 layout_columnSpan-->
 
-<!--    使用起来感觉GridLayout比Tablelayout好用-->
+    <!--    使用起来感觉GridLayout比Tablelayout好用-->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -250,10 +271,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_row="2"
+            android:layout_rowSpan="2"
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_rowSpan="2"
             android:text="确定"
             tools:ignore="ButtonStyle" />
 

@@ -14,19 +14,19 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class BarChartActivity extends AppCompatActivity {
+public class VBarChartActivity extends AppCompatActivity {
 
     @BindView(R.id.bar_chart)
     BarChart mBarChart;
 
-    private Context mContext = BarChartActivity.this;
+    private Context mContext = VBarChartActivity.this;
     private List<BarEntry> mBarEntry;
     private BarDataSet mBarDataSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bar);
+        setContentView(R.layout.activity_vbar);
         ButterKnife.bind(this);
         initData();
     }

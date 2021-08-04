@@ -23,6 +23,9 @@ class LoginModel {
         Log.e(TAG, "value:::$value")
     }
 
+    /**
+     * block方法的使用，根据返回的值的内容来确定 block值的数据类型。接收要用when关键字进行接收
+     */
     fun checkUserState(username: String, block: (Int) -> Unit) {
         // 0表示该用户名不可用  1表示该用户名可用
         val value: Int = random.nextInt(2)
