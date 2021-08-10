@@ -28,6 +28,8 @@
         <activity android:name=".VBarChartActivity" />
         <activity android:name=".HBarChartActivity" />
         <activity android:name=".LineChartActivity" />
+        <activity android:name=".RadarChartActivity" />
+        <activity android:name=".ScatterChartActivity" />
 
         <receiver android:name=".UsbBroadcastReceiver">
             <intent-filter android:priority="1000">

@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+// kotlin 找控件
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29

@@ -17,7 +17,7 @@ import java.io.File
  * 案例九：setTheme切换系统主题功能、recreate()的特性了解
  * 测试切换系统主题功能 以及调用recreate方法会走onSavedInstanceState方法和onRestoreInstanceState方法
  * 测试无障碍服务功能 AccessibilityService
- * 测试 TableLayout 和Gridlayout 进行复杂表格的制作  使用起来感觉GridLayout比Tablelayout更灵活 好用 todo 再来一种方法实现
+ * 测试 TableLayout 和Gridlayout 以及 Flow 进行复杂表格的制作  使用起来感觉GridLayout比Tablelayout更灵活好用 flow就是尝试一下
  */
 class MainActivity : AppCompatActivity() {
 

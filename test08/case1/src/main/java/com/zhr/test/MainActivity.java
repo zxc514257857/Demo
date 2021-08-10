@@ -1,11 +1,18 @@
 package com.zhr.test;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +23,8 @@ import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ThreadUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.zhr.test.ticker.TickerView;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -32,9 +41,10 @@ import butterknife.OnClick;
 
 /**
  * 案例一：
- * 测试MPChartLib 里面的
- * 圆饼图、垂直柱状图、折线图和雷达图demo
+ * 测试MPChartLib 里面的圆饼图、垂直柱状图、折线图和雷达图demo
  * TickerView 和 RecyclerView加载轮播文字
+ * Thread线程池 通过single模式可以让多个线程以队列方式执行
+ * u盘插入拔出状态监听
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -156,13 +166,31 @@ public class MainActivity extends AppCompatActivity {
         };
         // single cached  一般就使用single或者cached就好了
         // io cpu fix custom
-        ThreadUtils.executeBySingle(a);
-        ThreadUtils.executeBySingle(b);
-        ThreadUtils.executeBySingle(c);
+//        ThreadUtils.executeBySingle(a);
+//        ThreadUtils.executeBySingle(b);
+//        ThreadUtils.executeBySingle(c);
+
+        // 方法四：用ThreadUtils 的另一种写法
+        ExecutorService singlePool = ThreadUtils.getSinglePool();
+        singlePool.execute(() -> {
+            for (int i = 0; i < 10; i++) {
+                Log.i(TAG, "onCreate1: " + i);
+            }
+        });
+        singlePool.execute(() -> {
+            for (int i = 0; i < 10; i++) {
+                Log.i(TAG, "onCreate2: " + i);
+            }
+        });
+        singlePool.execute(() -> {
+            for (int i = 0; i < 10; i++) {
+                Log.i(TAG, "onCreate3: " + i);
+            }
+        });
 
         // 先插入u盘 再启动应用时的判断
         // 读取u盘里面的内容失败 原来是没有添加读写权限
-        String mountPath = CacheDoubleUtils.getInstance().getString("mountPath");
+        String mountPath = CacheDoubleUtils.getInstance().getString("mountPath", "");
         ToastUtils.showShort("mountPath111:" + mountPath);
         LogUtils.e("mountPath111:" + mountPath);
         boolean mounted = isMounted(mountPath);
@@ -173,12 +201,84 @@ public class MainActivity extends AppCompatActivity {
         if (file.exists() && file.isDirectory()) {
             // 在U盘根目录下找文件
             String[] list = file.list();
-            if(list != null && list.length > 0){
-                for(String aaa : list){
+            if (list != null && list.length > 0) {
+                for (String aaa : list) {
                     LogUtils.e("u盘里面的名称:" + aaa);
                 }
             }
         }
+
+        // 方法一：在子线程更新UI操作  runOnUiThread
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // ToastUtils 里面已经做了 线程切换操作 可以无惧子线程
+                // ToastUtils.showShort();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+//                        Toast.makeText(MainActivity.this, "子线程更新UI", Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+        }).start();
+
+        // 方法二：在子线程更新UI操作 Handler发送消息  handler.post()
+        Handler mHandler = new Handler(Looper.getMainLooper());
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+//                        Toast.makeText(MainActivity.this, "子线程更新UI", Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+        }).start();
+
+        // 方法三：子线程更新UI --- Handler发送消息  handler.sendMessage()
+        int MESSAGE_WHAT = 1000;
+        Handler handler = new Handler(){
+            @SuppressLint("HandlerLeak")
+            @Override
+            public void handleMessage(@NonNull @NotNull Message msg) {
+                super.handleMessage(msg);
+                if(msg.what == MESSAGE_WHAT){
+//                    Toast.makeText(MainActivity.this, "子线程更新UI", Toast.LENGTH_LONG).show();
+                }
+            }
+        };
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                handler.sendEmptyMessage(MESSAGE_WHAT);
+            }
+        }).start();
+
+        // 方法四： 通过EventBus进行线程切换
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+//                EventBus线程切换
+            }
+        }).start();
+
+        // 方法五： 通过AsyncTask 进行线程切换
+        AsyncTask asyncTask = new AsyncTask() {
+            @SuppressLint("StaticFieldLeak")
+            @Override
+            protected Object doInBackground(Object[] objects) {
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Object o) {
+                super.onPostExecute(o);
+                Toast.makeText(MainActivity.this, "子线程更新UI", Toast.LENGTH_LONG).show();
+            }
+        };
+        asyncTask.execute();
     }
 
     private void random() {
@@ -224,7 +324,13 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn_radar:
-                // TODO: 2021-07-06 雷达图demo  还需要完善
+                // 雷达图
+                ActivityUtils.startActivity(new Intent(mContext, RadarChartActivity.class));
+                break;
+
+            case R.id.btn_scatter:
+                // 散列图  用法和折线图的用法类似
+                ActivityUtils.startActivity(new Intent(mContext, ScatterChartActivity.class));
                 break;
 
             default:
@@ -234,6 +340,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 判断是否有U盘插入,当U盘开机之前插入使用该方法.
+     *
      * @param path
      * @return
      */
