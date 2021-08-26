@@ -10,6 +10,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -44,7 +45,9 @@ import butterknife.OnClick;
  * 测试MPChartLib 里面的圆饼图、垂直柱状图、折线图和雷达图demo
  * TickerView 和 RecyclerView加载轮播文字
  * Thread线程池 通过single模式可以让多个线程以队列方式执行
+ * 子线程更新UI操作
  * u盘插入拔出状态监听
+ * 自己绘制小圆点的方法
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     private TickerView mTv;
     private List<String> mList;
     private RecyclerView mRv;
+    private LinearLayout mLlDot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +71,11 @@ public class MainActivity extends AppCompatActivity {
         mList.add("王再阳");
         mList.add("李帅辉");
         mList.add("李建朋");
+
+        mLlDot = findViewById(R.id.ll_dot);
+        addDot();
         random();
+
         mTv.setOnClickListener(v -> random());
         initRv();
 
@@ -239,12 +247,12 @@ public class MainActivity extends AppCompatActivity {
 
         // 方法三：子线程更新UI --- Handler发送消息  handler.sendMessage()
         int MESSAGE_WHAT = 1000;
-        Handler handler = new Handler(){
+        Handler handler = new Handler() {
             @SuppressLint("HandlerLeak")
             @Override
             public void handleMessage(@NonNull @NotNull Message msg) {
                 super.handleMessage(msg);
-                if(msg.what == MESSAGE_WHAT){
+                if (msg.what == MESSAGE_WHAT) {
 //                    Toast.makeText(MainActivity.this, "子线程更新UI", Toast.LENGTH_LONG).show();
                 }
             }
@@ -281,10 +289,42 @@ public class MainActivity extends AppCompatActivity {
         asyncTask.execute();
     }
 
+    private void addDot() {
+        mLlDot.removeAllViews();
+        int totalPage = mList.size();
+        for (int i = 0; i < totalPage; i++) {
+            View view = new View(this);
+            view.setBackgroundResource(R.drawable.dot_dadb);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(10, 10);
+            layoutParams.setMargins(3, 0, 3, 0);
+            view.setLayoutParams(layoutParams);
+            mLlDot.addView(view);
+        }
+    }
+
     private void random() {
         int random = new Random().nextInt(mList.size());
-        LogUtils.e("random:" + mList.get(random));
+        LogUtils.e("random:" + random);
+        LogUtils.e("mList.size():" + mList.size());
         mTv.setText(mList.get(random) + "");
+        refreshDot(random, mList.size());
+    }
+
+    private void refreshDot(int index, int totalPage) {
+        for (int i = 0; i < totalPage; i++) {
+            View view = mLlDot.getChildAt(i);
+            if (null == view) {
+                LogUtils.e("view is null");
+                return;
+            }
+            if (i == index) {
+                view.setBackgroundResource(R.drawable.dot_4646);
+            } else {
+                view.setBackgroundResource(R.drawable.dot_dadb);
+            }
+            // 刷新界面
+            view.invalidate();
+        }
     }
 
     private void initRv() {
