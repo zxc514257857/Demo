@@ -19,15 +19,28 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".TestAccessibilityService"
+        <!-- 在设置中的无障碍-服务 中，能够找到这个自定义的服务-->
+        <service
+            android:name=".TestAccessibilityService"
             android:label="测试注册无障碍服务"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
-                <action android:name="android.accessibilityservice.AccessibilityService"/>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
             <!-- 配置监听的事件类型、要监听哪个程序、最小监听时间间隔等属性-->
-            <meta-data android:name="android.accessibilityservice"
-                android:resource="@xml/accessibility_service_config"/>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
         </service>
+
+        <provider
+            android:name=".InstallProvider"
+            android:authorities="com.zhr.test.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 </manifest>

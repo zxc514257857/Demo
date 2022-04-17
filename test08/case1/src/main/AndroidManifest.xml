@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zhr.test">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,8 +24,29 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".PieChartActivity"/>
-        <activity android:name=".BarChartActivity"/>
+        <activity android:name=".PieChartActivity" />
+        <activity android:name=".VBarChartActivity" />
+        <activity android:name=".HBarChartActivity" />
+        <activity android:name=".LineChartActivity" />
+        <activity android:name=".RadarChartActivity" />
+        <activity android:name=".ScatterChartActivity" />
 
+        <receiver android:name=".UsbBroadcastReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <!--                这个必须要加才能判断u盘状态-->
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <!--                要设置自启权限，否则自启的广播监听不会生效-->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <!--                这个必须要加才能监控到软件包信息-->
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

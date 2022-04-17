@@ -112,7 +112,7 @@
   
 <font size=5.5>case8模拟视频播放，练习的是Activity的生命周期
   
-<font size=6>*test7*
+<font size=6>*test07*
 ---------
 <font size=5.5>case1练习的是android原生代码实现多线程下载功能
 
@@ -133,3 +133,25 @@
 <font size=5.5>case10练习的是android中的时间类、debug调试、字节等单位的转换、和C语言 socket对接传递结构体数据
 
 <font size=5.5>case11练习的是Socket Server端和Client端 代码编写
+  
+<font size=6>*test08*
+---------
+<font size=5.5>case1练习的是MPChartLib里面的圆饼图、垂直柱状图、折线图和雷达图；TickerView和RecyclerView加载轮播文字；Thread线程池，通过Single模式可以让多个线程以队列方式执行；打开子线程在里面进行耗时性操作，需要更新UI时再切换线程到主线程进行UI更新操作；U盘插入拔出状态监听；自己绘制小圆点方法
+  
+<font size=5.5>case2练习的是ConstraintLayout基础布局特性和2.0布局特性；Fragment的使用
+  
+<font size=5.5>case3练习的是PendingIntent的使用
+  
+<font size=5.5>case4练习的是Notification的使用
+  
+<font size=5.5>case5练习的是ShapeableImageView的使用
+  
+<font size=5.5>case6练习的是Arouter的使用
+  
+<font size=5.5>AIDLClient、AIDLServer练习的是AIDL客户端、服务端的使用
+  
+<font size=5.5>installDemo练习的是AccessibilityService无障碍服务的使用
+  
+<font size=5.5>kotlinDemo练习的是Kotlin的基本使用
+  
+<font size=5.5>case7- 是MVP框架的使用

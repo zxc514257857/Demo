@@ -6,7 +6,6 @@ import com.zhr.test.LoginModel.Companion.STATE_LOGIN_LOADING
 import com.zhr.test.LoginModel.Companion.STATE_LOGIN_SUCCESS
 import java.util.*
 
-
 class LoginPresenter {
 
     val random: Random = Random()

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 /**
- * MVC示例代码
+ * 案例七：MVC示例代码、Kotlin语法的使用：by lazy、接口回调的写法
  */
 class LoginActivity : AppCompatActivity(), LoginModel.LoginStateChangeCallabck {
 

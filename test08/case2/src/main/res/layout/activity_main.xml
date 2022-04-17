@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConstraintLayoutActivity"
     tools:ignore="MissingConstraints" >
 
 <!--    Space代替View 节省绘制时间-->
@@ -15,12 +14,12 @@
         android:layout_height="50dp"
         android:background="@color/colorPrimary"/>
 
-<!--    constraintlayout 2.0布局特性-->
     <androidx.constraintlayout.widget.Placeholder
         android:id="@+id/tvI"
         android:layout_width="50dp"
         android:layout_height="50dp"/>
 
+<!--    Flow是一个特别强大的布局辅助工具，支持多种布局模式，可以快速构造多样性布局-->
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow"
         android:layout_width="match_parent"
@@ -35,11 +34,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-    
+
+<!--    Layer是在指定的位置处添加一个图层，它不会增加layout的层级-->
+<!--    constraint_referenced_ids 用于设置关联的View布局的id 不设置默认适用于整个布局-->
     <androidx.constraintlayout.helper.widget.Layer
         android:id="@+id/layer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#000000"
         app:constraint_referenced_ids="tvA,tvC"/>
 
@@ -113,16 +114,25 @@
         android:textColor="#ffffff"
         android:textSize="16sp" />
 
+<!--    ImageFilterButton 带过滤器的图片按钮，实现各种灵活的设置效果-->
+<!--    round 设置圆角  roundPercent 设置圆角比例0-1取值-->
+<!--    warmth色温：1=neutral自然, 2=warm暖色, 0.5=cold冷色-->
+<!--    saturation饱和度：0 = grayscale灰色, 1 = original原始, 2 = hyper saturated超饱和-->
+<!--    contrast对比：1 = unchanged原始, 0 = gray暗淡, 2 = high contrast高对比-->
     <androidx.constraintlayout.utils.widget.ImageFilterButton
         android:id="@+id/ifv"
         android:src="@mipmap/ic_launcher"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:round="50dp"/>
+        app:round="30dp"
+        app:warmth="2"/>
 
+<!--    MockView 就是用控件画原型图  id就是中间显示的文字内容-->
     <androidx.constraintlayout.utils.widget.MockView
         android:id="@+id/mock"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

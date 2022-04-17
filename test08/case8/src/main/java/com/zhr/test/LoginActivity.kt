@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 /**
- * MVP示例代码
+ * 案例八：MVP示例代码、Kotlin语法的使用：mvp数据流，view-> 调用presenter-> 调用model-> 通过block函数回调给presenter-> presenter将结果回调给view
  */
 class LoginActivity : AppCompatActivity(), LoginPresenter.LoginStateChangeCallabck {
 

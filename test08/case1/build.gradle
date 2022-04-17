@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+// kotlin 找控件
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
@@ -40,4 +43,10 @@ dependencies {
     // butterknife onClick
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     implementation 'com.blankj:utilcodex:1.25.7'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

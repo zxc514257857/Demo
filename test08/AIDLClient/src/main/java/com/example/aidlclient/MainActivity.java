@@ -15,6 +15,9 @@ import android.widget.Button;
 import com.example.aidlserver.IStudent;
 import com.example.aidlserver.bean.StudentInfo;
 
+/**
+ * AIDL 客户端 服务端的基础使用
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBtn;

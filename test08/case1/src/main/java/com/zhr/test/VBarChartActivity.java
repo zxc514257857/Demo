@@ -14,31 +14,32 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class BarChartActivity extends AppCompatActivity {
+public class VBarChartActivity extends AppCompatActivity {
 
     @BindView(R.id.bar_chart)
     BarChart mBarChart;
 
-    private Context mContext = BarChartActivity.this;
+    private Context mContext = VBarChartActivity.this;
     private List<BarEntry> mBarEntry;
     private BarDataSet mBarDataSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bar);
+        setContentView(R.layout.activity_vbar);
         ButterKnife.bind(this);
         initData();
     }
 
     private void initData() {
-        initBar1Entry();
-        initBar1DataSet();
-        initBar1Manager();
+        initBarEntry();
+        initBarDataSet();
+        initBarManager();
     }
 
-    private void initBar1Entry() {
+    private void initBarEntry() {
         mBarEntry = new ArrayList<>();
+        // 这里的x轴是纵坐标，y轴是横坐标
         mBarEntry.add(new BarEntry(0f, 396));
         mBarEntry.add(new BarEntry(1f, 1089));
         mBarEntry.add(new BarEntry(2f, 963));
@@ -46,15 +47,15 @@ public class BarChartActivity extends AppCompatActivity {
         mBarEntry.add(new BarEntry(4f, 287));
     }
 
-    private void initBar1DataSet() {
-        mBarDataSet = new BarDataSet(mBarEntry , "有违章");
+    private void initBarDataSet() {
+        mBarDataSet = new BarDataSet(mBarEntry , "我是图例");
         mBarDataSet.setValueTextColor(Color.RED);
         mBarDataSet.setColor(Color.GREEN);
         mBarDataSet.setValueTextSize(14f);
     }
 
-    private void initBar1Manager() {
-        BarChartManager barChartManager = new BarChartManager(mBarChart , mBarDataSet , mContext);
-        barChartManager.initBar1Chart();
+    private void initBarManager() {
+        BarChartManager barChartManager = new BarChartManager(mBarChart , mBarDataSet);
+        barChartManager.initBarChart();
     }
 }
