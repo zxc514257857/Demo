@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">case13</string>
+    <string name="team_a">team A</string>
+    <string name="team_b">team B</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">案例五</string>
+    <string name="title">欢迎您</string>
+    <string name="content">这是一条消息</string>
+    <string name="button">按钮</string>
+</resources>

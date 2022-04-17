@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">case09</string>
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+    <string name="image_button1">imageButton1</string>
+    <string name="image_button2">imageButtons2</string>
+</resources>
